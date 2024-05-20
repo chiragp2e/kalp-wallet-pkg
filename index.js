@@ -28,7 +28,7 @@ const connectToWallet = async (token, name) => {
 const registerDAppToken = async () => {
   const methodCallId = "";
   const methodName = "connectToWallet";
-  const methodArgs = [dappToken, dappName];
+  const methodArgs = [];
   let registerDAppTokenPromise = new Promise((resolve, reject) => {
     const eventListenerFunction = async function (event) {
       try {
@@ -734,14 +734,6 @@ const connectToWalletBackgroundListner = (kalpWallet) => {
 };
 
 module.exports = {
-  getToken,
-  connectToWallet,
-  handleReadTransaction,
-  getEnrollmentIdFromWallet,
-  submitTransactionFromWallet,
-  readTransactionFromWallet,
-  disconnectWallet,
-
   handleKalpWalletProvider,
   connectToWalletListner,
   createKalpWallet,
